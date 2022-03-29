@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<title>HP question</title>
+	<body>
+		{% block body %}{% endblock %}
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				<ul>
+					{% for message in messages %}
+						<li> {{message}} </li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		{% endwith %}
+                <h1>Welcome {{username}}</h1>
+                <a href="www.google.com"> not google</a>
+                <p>
+                <ul>
+			{% for city in cities %}
+				<li> {{city}} </li>
+			{% endfor %}
+                </ul>
+                </p>
+		<form action="/" method="POST">
+			<label>City Name
+				<br><input type="text" name="cityName" id="cityName" maxlength="32"></br>
+			</label>
+			<p><input type="submit" id="submit" value="Submit"></p>
+		</form>
+	</body>
+</html>
