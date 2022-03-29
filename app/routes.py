@@ -12,10 +12,5 @@ def home():
 		return redirect(url_for('home'))
 	return render_template('home.html',cities=city_names,username=name)
 
-'''
-@myapp_obj.route("/addCity", )
-def addCity():
-	return render_template('submit.html', cities=city_names, username=name)
-'''
 if __name__ == "__main__":
 	app.run(port=80)
