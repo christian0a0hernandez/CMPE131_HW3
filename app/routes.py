@@ -1,10 +1,11 @@
 from app import myobj
 from flask import render_template, flash, request, redirect, url_for
 
+name = "Lisa"
+city_names = ['Paris', 'London', 'Rome', 'Tahiti']
+
 @myobj.route("/", methods=['GET', 'POST'])
 def home():
-	name = "Lisa"
-	city_names = ['Paris', 'London', 'Rome', 'Tahiti']
 	new_city = ""
 	if (request.method == 'POST'):
 		new_city = request.form['cityName']
