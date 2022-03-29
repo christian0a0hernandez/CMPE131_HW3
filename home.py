@@ -1,6 +1,6 @@
 from flask import Flask
 
-myobj = Flask(__name__)
+myapp_obj = Flask(__name__)
 
 @myapp_obj.route("/")
 def home():
